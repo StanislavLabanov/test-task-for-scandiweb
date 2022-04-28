@@ -1,0 +1,54 @@
+@import "simplifyingStyles.scss";
+
+.flex_product_block {
+   @include displayAligment(space-between, top);
+
+   .product_pictures {
+
+      img {
+         cursor: pointer;
+         display: block;
+         @include WidHeig(80px, 80px);
+         margin-bottom: 40px;
+      }
+   }
+
+   .main_img_product {
+      @include WidHeig(610px, 560px);
+   }
+
+   .description_product {
+
+      .prise_title {
+         @include textCharacteristics($clr1, 700, 18px);
+         text-transform: uppercase;
+         margin: 40px 0 10px 0;
+      }
+
+      .size_title {
+         @include textCharacteristics($clr1, 700, 18px);
+         text-transform: uppercase;
+         margin: 0 0 10px 0;
+      }
+
+      .prise {
+         @include textCharacteristics($clr1, 700, 24px);
+         margin-bottom: 40px;
+      }
+
+      .button_add_to_cart {
+         @include blockSizes(292px, 52px, $clr2);
+         @include displayAligment(center, center);
+         @include textCharacteristics($clr3, 600, 16px);
+         text-transform: uppercase;
+         cursor: pointer;
+         margin: 30px 0;
+      }
+
+      .text_description {
+         @include textCharacteristics($clr1, 400, 16px);
+         line-height: 26px;
+      }
+
+   }
+}

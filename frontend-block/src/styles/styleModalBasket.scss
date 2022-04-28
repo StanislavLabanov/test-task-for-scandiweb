@@ -1,0 +1,130 @@
+@import "simplifyingStyles.scss";
+
+.modal_basket {
+   position: absolute;
+   top: 0;
+   right: 100px;
+   z-index: 1000;
+   width: 370px;
+   max-height: 557px;
+   background-color: $clr3;
+   overflow: auto;
+
+   .conteiner_modal_busket {
+      width: 320px;
+      margin: 0 auto;
+
+      .title {
+         @include textCharacteristics($clr1, 500, 16px);
+         margin-top: 10px;
+
+         span {
+            @include textCharacteristics($clr1, 700, 16px);
+         }
+      }
+
+      .mini_attributes {
+         .product_card_basket {
+            .product_description {
+               .product_name {
+                  @include textCharacteristics($clr1, 300, 16px);
+               }
+
+               .product_prise {
+                  @include textCharacteristics($clr1, 500, 16px);
+               }
+
+               .attributes {
+                  .name_attributes {
+                     @include textCharacteristics($clr1, 400, 14px);
+                  }
+
+                  .product_attributes {
+                     .new_attributes {
+                        @include blockSizes(24px, 24px, rgba(166, 166, 166, 0.2));
+                        @include textCharacteristics($clr4, 400, 12px);
+                        border: 1px solid $clr4;
+                     }
+
+                     .new_attributes.active {
+                        @include blockSizes(25px, 25px, $clr1);
+                        color: $clr3;
+                        font-size: 12px;
+                        font-weight: 400px;
+                        transform: scale(1)
+                     }
+
+                     .new_attributes.active.color_attr {
+                        @include blockSizes(18px, 18px, $clr1);
+                        padding: 1px;
+                        border: 2px solid $clr2;
+                     }
+
+                     .color_attr {
+                        @include WidHeig(18px, 18px);
+                     }
+                  }
+               }
+            }
+
+            .img_block_basket {
+               .quantity_of_goods {
+
+                  .new_attributes,
+                  .plus,
+                  .minus {
+                     @include WidHeig(24px, 24px)
+                  }
+
+                  .number_product {
+                     @include textCharacteristics($clr1, 500, 16px);
+                  }
+               }
+
+               .images_conteiner {
+                  @include WidHeig(110px, 140px);
+
+                  .images_flex_block {
+                     img {
+                        @include WidHeig(110px, 120px);
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+
+      .total_modal {
+         @include displayAligment(space-between, center);
+         margin: 40px 0;
+
+         .total {
+            @include textCharacteristics($clr1, 500, 16px);
+         }
+      }
+
+      .buttons_modal {
+         @include displayAligment(space-between, center);
+         margin-bottom: 20px;
+
+         a {
+            text-decoration: none;
+
+            .button_view_bag {
+               @include WidHeig(140px, 43px);
+               border: 1px solid $clr1;
+               @include displayAligment(center, center);
+               @include textCharacteristics($clr1, 600, 14px);
+            }
+         }
+
+         .button_check_out {
+            @include blockSizes(141px, 44px, $clr2);
+            @include displayAligment(center, center);
+            @include textCharacteristics($clr3, 600, 14px);
+            cursor: pointer;
+         }
+      }
+   }
+}

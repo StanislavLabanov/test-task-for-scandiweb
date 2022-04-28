@@ -1,0 +1,110 @@
+@import "simplifyingStyles.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@100;200;300;400;500;600;700;900&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,900;1,900&display=swap');
+
+body {
+  font-family: Raleway;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .conteiner {
+    padding-top: 120px;
+    max-width: 1238px;
+    margin: 0 auto;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.attributes {
+  .name_attributes {
+    @include textCharacteristics($clr1, 700, 18px);
+    margin: 16px 0 8px 0;
+  }
+
+  .product_attributes {
+    @include displayAligment(left, center);
+    margin-bottom: 30px;
+
+    .new_attributes {
+      @include WidHeig(60px, 45px);
+      border: 1px solid $clr1;
+      @include displayAligment(center, center);
+      cursor: pointer;
+      margin-right: 12px;
+      @include textCharacteristics($clr1, 400, 16px);
+    }
+
+    .color_attr {
+      @include WidHeig(32px, 32px);
+    }
+
+    .new_attributes.active {
+      transform: scale(1.1);
+      background-color: $clr1;
+      color: $clr3;
+    }
+
+    .new_attributes.active.color_attr {
+      transform: scale(1.1);
+      border: 2px solid $clr2;
+    }
+
+    .new_attributes:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.product_attributes:last-child {
+  margin-bottom: 0px;
+}
+
+.name_product {
+  @include textCharacteristics($clr1, 600, 30px);
+  margin-bottom: 15px
+}
+
+.brand {
+  @include textCharacteristics($clr1, 400, 30px);
+}
+
+.button_add_to_cart {
+  @include blockSizes(292px, 52px, $clr2);
+  @include displayAligment(center, center);
+  @include textCharacteristics($clr3, 600, 16px);
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 30px 0;
+}
+
+.overflow {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.4);
+  @include displayAligment(center, center);
+
+  .img_and_close_block {
+    position: relative;
+
+    img {
+      width: 600px;
+      height: 600px;
+    }
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      cursor: pointer;
+    }
+  }
+}

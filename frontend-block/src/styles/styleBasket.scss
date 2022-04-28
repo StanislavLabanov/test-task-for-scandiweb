@@ -1,0 +1,118 @@
+@import "simplifyingStyles.scss";
+
+
+.basket_page {
+   .title_routes {
+      margin: 0;
+      padding-bottom: 50px;
+      border-bottom: 1px solid #E5E5E5;
+   }
+
+   .discription_basket {
+      margin-top: 32px;
+
+      .tax,
+      .number,
+      .total {
+         @include textCharacteristics($clr1, 400, 24px);
+         margin-bottom: 8px;
+
+         span {
+            @include textCharacteristics($clr1, 700, 24px);
+         }
+      }
+
+      .total {
+         margin: 24px 0 20px 0;
+      }
+
+      .order_button {
+         @include blockSizes(280px, 45px, $clr2);
+         margin-bottom: 100px;
+         @include displayAligment(center, center);
+         cursor: pointer;
+         color: $clr3;
+      }
+   }
+}
+
+.product_card_basket {
+   @include displayAligment(space-between, center);
+   border-bottom: 1px solid #E5E5E5;
+   padding: 25px 0;
+
+   .product_description {
+
+      .product_name {
+         @include textCharacteristics($clr1, 600, 30px);
+         margin-bottom: 16px;
+      }
+
+      .product_prise {
+         @include textCharacteristics($clr1, 700, 24px);
+         margin-bottom: 16px;
+      }
+   }
+
+   .img_block_basket {
+      @include displayAligment(center, center);
+
+      .quantity_of_goods {
+
+         .plus,
+         .minus {
+            cursor: pointer;
+            @include WidHeig(45px, 45px);
+            border: 1px solid $clr1;
+            @include displayAligment(center, center);
+         }
+      }
+
+      .number_product {
+         @include textCharacteristics($clr1, 500, 24px);
+         margin: 30px 0;
+         text-align: center
+      }
+
+      .images_conteiner {
+         position: relative;
+         margin-left: 15px;
+         @include WidHeig(200px, 228px);
+         overflow: hidden;
+
+         .images_flex_block {
+            position: relative;
+            @include displayAligment(center, center);
+            height: 100%;
+            transition: all .25s ease-in;
+
+            img {
+               @include WidHeig(200px, 228px);
+            }
+         }
+
+         .arrows {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            @include displayAligment(center, center);
+
+            .arrow_left,
+            .arrow_right {
+               @include WidHeig(24px, 24px);
+               background: rgba($color: $clr1, $alpha: .7);
+               cursor: pointer;
+               @include displayAligment(center, center);
+
+               img {
+                  @include WidHeig(5px, 11px);
+               }
+            }
+
+            .arrow_left {
+               margin-right: 8px;
+            }
+         }
+      }
+   }
+}

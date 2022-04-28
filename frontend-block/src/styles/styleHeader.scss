@@ -1,0 +1,121 @@
+@import "simplifyingStyles.scss";
+
+.header {
+   padding-top: 25px;
+   @include blockSizes(100%, 80px, $clr3);
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 10;
+
+   .conteiner_header {
+      max-width: 1238px;
+      margin: 0 auto;
+      @include displayAligment(space-between, center);
+
+      .header_nav_menu {
+         ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            @include displayAligment(space-between, center);
+
+            .menu_elements {
+               position: relative;
+               margin-right: 32px;
+
+               a {
+                  @include textCharacteristics($clr1, 400, 16px);
+                  text-decoration: none;
+                  transition: color .25s ease-in;
+               }
+
+               a:hover {
+                  color: $clr2;
+               }
+            }
+
+            .menu_elements .active {
+               color: $clr2;
+            }
+
+            .menu_elements .active:before {
+               content: ' ';
+               pointer-events: none;
+               @include blockSizes(100%, 1px, $clr2);
+               position: absolute;
+               left: 0;
+               bottom: -15px;
+
+            }
+
+            .menu_elements:last-child {
+               margin-right: 0px;
+            }
+
+            .menu_elements:before {
+               content: ' ';
+               pointer-events: none;
+               @include blockSizes(100%, 1px, $clr1);
+               position: absolute;
+               left: 0;
+               bottom: -15px;
+               transform: scale(0);
+               transition: transform .25s ease-in;
+               transform-origin: right;
+            }
+
+            .menu_elements:hover:before {
+               background-color: $clr2;
+               transform: scaleX(1);
+               transition: transform .25s;
+               transform-origin: left;
+            }
+         }
+      }
+
+      .basket_and_prise_block {
+         position: relative;
+         @include displayAligment(space-between, center);
+
+         .number_products_in_basket {
+            @include blockSizes(25px, 25px, $clr1);
+            @include displayAligment(center, center);
+            position: absolute;
+            right: -20px;
+            top: -15px;
+            border-radius: 50%;
+            color: $clr3;
+
+         }
+
+         .prise_button {
+            margin-right: 22px;
+
+            img {
+               margin-left: 10px;
+            }
+         }
+
+         .prise_modal {
+            z-index: 1000;
+            position: absolute;
+            left: -20px;
+            top: 36.5px;
+            box-shadow: 0 0 25px 5px rgba(122, 122, 122, 0.2);
+            @include blockSizes(114px, 220px, $clr3);
+            @include displayAligment(center, center);
+
+            .conversion {
+               cursor: pointer;
+               margin-bottom: 20px;
+               @include textCharacteristics($clr1, 500, 18px);
+            }
+
+            .conversion:last-child {
+               margin-bottom: 0;
+            }
+         }
+      }
+   }
+}

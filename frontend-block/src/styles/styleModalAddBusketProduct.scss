@@ -1,0 +1,36 @@
+@import "simplifyingStyles.scss";
+
+.modal_attribute_product {
+   position: relative;
+   @include blockSizes(450px, 500px, $clr3);
+   @include displayAligment(center, center);
+
+   .name_product {
+      text-align: center;
+      margin-bottom: 20px;
+   }
+
+
+   .close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      cursor: pointer;
+   }
+
+   .attributes {
+      .name_attributes {
+         margin: 20px 0;
+         @include displayAligment(center, center);
+      }
+
+      .product_attributes {
+         @include displayAligment(center, center)
+      }
+
+   }
+
+   .button {
+      @include displayAligment(center, center)
+   }
+}
