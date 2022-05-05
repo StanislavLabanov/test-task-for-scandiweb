@@ -1,0 +1,12 @@
+@import "simplifyingStyles.scss";
+
+.title_main_page_block {
+   text-align: center;
+   margin-top: 150px;
+
+   h1 {
+      span {
+         color: red;
+      }
+   }
+}

@@ -42,7 +42,7 @@ export default class ButtonProductPade extends React.Component {
                      >ADD TO CART
                      </div>
                   </div>
-                  {this.state.notAttributesProductText && <div className="not_attributes_product" style={{ color: 'red' }}>{this.state.notAttributesProductText}</div>}
+                  {this.state.notAttributesProductText && <div className="not_attributes_product" >{this.state.notAttributesProductText}</div>}
                </Fragment>
             }
          </buttonProductPageContext.Consumer>

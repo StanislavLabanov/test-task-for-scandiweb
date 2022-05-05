@@ -15,6 +15,7 @@ import './styles/styleProductPage.scss';
 import './styles/styleBasket.scss';
 import './styles/styleModalAddBusketProduct.scss';
 import './styles/styleModalBasket.scss';
+import './styles/styleMainPage.scss';
 
 import App from './App';
 

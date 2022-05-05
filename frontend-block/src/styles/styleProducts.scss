@@ -6,53 +6,63 @@
    grid-gap: 40px;
 
    .card {
+      z-index: 1;
       position: relative;
       top: 0;
       left: 0;
       margin-top: 51px;
       padding: 15px;
+      transform: scale(1);
       @include blockSizes(354px, 454px, $clr3);
 
-      .image_block_card {
-         padding: 0;
-         margin: 0;
+      a {
+         text-decoration: none;
 
-         .img_card {
-            @include blockSizes(354px, 360px, $clr3);
+         .image_block_card {
+            padding: 0;
+            margin: 0;
+
+            .img_card {
+               transform: scale(.7);
+               @include blockSizes(100%, 360px, $clr3);
+               object-fit: contain;
+            }
          }
-      }
 
-      .product_name {
-         @include textCharacteristics($clr1, 300, 18px);
-         margin-top: 25px;
-         line-height: 29px;
-      }
+         .product_name {
+            @include textCharacteristics($clr1, 300, 18px);
+            margin-top: 25px;
+            line-height: 29px;
+         }
 
-      .product_prise {
-         @include textCharacteristics($clr1, 500, 18px);
-         line-height: 29px;
+         .product_prise {
+            @include textCharacteristics($clr1, 500, 18px);
+            line-height: 29px;
+         }
+
+         .background_card_overflow {
+            opacity: .7;
+            background: rgb(255, 255, 255);
+         }
+
+         .stock_text {
+            position: absolute;
+            z-index: 100;
+            top: 162px;
+            left: 106px;
+            @include textCharacteristics($clr5, 400, 24px);
+         }
       }
 
       .add_cart_button {
          position: absolute;
+         z-index: 100000;
          right: 30px;
          bottom: 82px;
          border-radius: 50%;
          @include blockSizes(50px, 50px, $clr2);
          @include displayAligment(center, center);
          cursor: pointer;
-      }
-
-      .background_card_overflow {
-         opacity: .7;
-         background: rgb(255, 255, 255);
-      }
-
-      .stock_text {
-         position: absolute;
-         top: 162px;
-         left: 106px;
-         @include textCharacteristics($clr5, 400, 24px);
       }
    }
 

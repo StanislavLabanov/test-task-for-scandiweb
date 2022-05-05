@@ -10,11 +10,13 @@
          display: block;
          @include WidHeig(80px, 80px);
          margin-bottom: 40px;
+         object-fit: contain;
       }
    }
 
    .main_img_product {
       @include WidHeig(610px, 560px);
+      object-fit: contain;
    }
 
    .description_product {

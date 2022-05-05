@@ -8,7 +8,6 @@ export default class AttributProductPage extends React.Component {
       this.state = {
          classNameState: [],
          massColorProduct: [],
-         itemsAttributes: []
       }
    }
 

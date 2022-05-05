@@ -11,7 +11,7 @@ class Prise extends React.Component {
    render() {
       return (
          <Fragment>
-            <div style={{ width: '30px' }}>{this.props.currency}</div>
+            <div>{this.props.currency}</div>
             <div className="prise_button" data-action="true" >
                {
                   this.props.closeModal

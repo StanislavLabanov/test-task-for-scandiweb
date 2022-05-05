@@ -17,7 +17,7 @@ class Basket extends React.Component {
       return (
          <div className="basket_page">
             <h2 className="title_routes">CART</h2>
-            <BasketProducts flag={this.state.flag} priseFunction={this.props.priseFunction} removeProductsInBusket={this.props.removeProductsInBusket} numberProductsInBusket={this.props.numberProductsInBusket} currency={this.props.currency} data={this.props.data} />
+            <BasketProducts flag={this.state.flag} priseFunction={this.props.priseFunction} removeProductsInBusket={this.props.removeProductsInBusket} numberProductsInBusket={this.props.numberProductsInBusket} currency={this.props.currency} />
             <div className="discription_basket">
                {
                   +localStorage.getItem('numberProductsInBusket') !== 0

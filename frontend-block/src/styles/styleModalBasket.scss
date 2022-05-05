@@ -44,6 +44,7 @@
                         @include blockSizes(24px, 24px, rgba(166, 166, 166, 0.2));
                         @include textCharacteristics($clr4, 400, 12px);
                         border: 1px solid $clr4;
+                        cursor: auto;
                      }
 
                      .new_attributes.active {

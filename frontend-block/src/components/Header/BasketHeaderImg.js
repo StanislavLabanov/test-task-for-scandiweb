@@ -33,7 +33,7 @@ class BasketHeaderImg extends React.Component {
                         <div className="conteiner_modal_busket">
                            <div className="title"><span>My Bag:</span> {localStorage.getItem('numberProductsInBusket') ? localStorage.getItem('numberProductsInBusket') : 0} items</div>
                            <div className="mini_attributes">
-                              <BasketProducts flag={this.state.flag} priseFunction={this.props.priseFunction} removeProductsInBusket={this.props.removeProductsInBusket} numberProductsInBusket={this.props.numberProductsInBusket} currency={this.props.currency} data={this.props.data} basketProductsId={this.props.basketProductsId} />
+                              <BasketProducts flag={this.state.flag} priseFunction={this.props.priseFunction} removeProductsInBusket={this.props.removeProductsInBusket} numberProductsInBusket={this.props.numberProductsInBusket} currency={this.props.currency} basketProductsId={this.props.basketProductsId} />
                            </div>
                            <div className="total_modal">
                               <div className="total">Total</div>

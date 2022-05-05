@@ -32,11 +32,11 @@ export default class BasketProducts extends React.Component {
                                     item.id === "Color"
                                        ?
                                        item.items.map(it =>
-                                          <div className={el.attributes.filter(i => i.name === it.id && i.title === item.id)[0] ? "new_attributes color_attr active" : "new_attributes color_attr"} style={{ backgroundColor: `${it.value}`, cursor: 'auto' }} key={it.id}></div>
+                                          <div className={el.attributes.filter(i => i.name === it.id && i.title === item.id)[0] ? "new_attributes color_attr active" : "new_attributes color_attr"} style={{ backgroundColor: `${it.value}` }} key={it.id}></div>
                                        )
                                        :
                                        item.items.map(it =>
-                                          <div className={el.attributes.filter(i => i.name === it.id && i.title === item.id)[0] ? "new_attributes active" : "new_attributes"} style={{ cursor: 'auto' }} key={it.id}> {it.value}</div>
+                                          <div className={el.attributes.filter(i => i.name === it.id && i.title === item.id)[0] ? "new_attributes active" : "new_attributes"} key={it.id}> {it.value}</div>
                                        )
                                  }
                               </div>
@@ -85,7 +85,7 @@ export default class BasketProducts extends React.Component {
                   </div>
                </div >
             )
-            : <div className="no_products" style={{ color: 'red', textAlign: 'center', marginTop: '100px' }}>you don't have any added products yet</div>
+            : <div className="no_products">you don't have any added products yet</div>
       )
    }
 }

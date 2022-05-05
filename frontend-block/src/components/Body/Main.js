@@ -7,8 +7,8 @@ class MainPage extends React.Component {
 
    render() {
       return (
-         <div style={{ textAlign: 'center', marginTop: '150px' }}>
-            <h1>My test project for <span style={{ color: 'red' }}>Scandiweb</span></h1>
+         <div className="title_main_page_block">
+            <h1>My test project for <span>Scandiweb</span></h1>
          </div>
       )
    }
